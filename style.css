@@ -1,0 +1,163 @@
+/* ======================== */
+/* ESTILO GLOBAL
+       */
+/* ======================== */
+
+body
+{
+    margin:0;
+    padding:0;
+    background:#f4f6f9;  /* gris laboratorio muy claro */
+    font-family:"Segoe UI",sans-serif;
+    height:100vh;
+
+    display:flex;
+    justify-content:center;   /* centra horizontal */
+    align-items:center;      /* centra vertical */
+}
+
+/* Contenedor principal tipo instrumento científico (MODERADAMENTE GRANDE) */
+.container
+{
+    background:#ffffff;
+    padding:45px; /* Reducido de 60px a 45px */
+    width:95%;
+    max-width:700px; /* Reducido de 850px a 700px */
+    border-radius:16px; 
+    border:1px solid #d3d6da;
+    box-shadow:0px 7px 16px rgba(0,0,0,0.08);
+    transition:0.25s ease all;
+}
+
+/* Efecto de precisión al pasar el mouse */
+.container:hover
+{
+    box-shadow:0px 8px 18px rgba(0,0,0,0.1);
+}
+
+h2 {
+    font-size:28px; /* Reducido de 32px a 28px */
+    color:#2c2c2c;
+    text-align:center;
+    margin-bottom:25px; /* Reducido de 30px a 25px */
+    font-weight:600;
+    letter-spacing:0.2px;
+}
+
+/* ======================== */
+/* CAMPOS
+            */
+/* ======================== */
+
+label
+{
+    display:block;
+    font-size:16px; /* Reducido de 18px a 16px */
+    margin-top:25px; /* Reducido de 30px a 25px */
+    margin-bottom:7px; 
+    color:#444;
+    font-weight:500;
+}
+
+/* Inputs estilo panel industrial (MODERADAMENTE GRANDES) */
+input
+{
+    width:100%;
+    padding:14px 16px; /* Reducido de 16px/18px a 14px/16px */
+    font-size:18px; /* Reducido de 20px a 18px */
+    border:1px solid #c0c4c9; /* Reducido a 1px */
+    border-radius:8px; /* Reducido a 8px */
+    background:#fdfdfd;
+    transition:0.15s ease;
+}
+
+input:focus
+{
+    border-color:#006fcf;
+    box-shadow:0 0 5px rgba(0,111,207,0.35);
+}
+
+/* ======================== */
+/* BOTÓN
+            */
+/* ======================== */
+
+button
+{
+    width:100%;
+    margin-top:30px; /* Reducido de 40px a 30px */
+    padding:16px; /* Reducido de 18px a 16px */
+    font-size:18px; /* Reducido de 20px a 18px */
+    background-color:#0072c8;
+    border:none;
+    border-radius:8px;
+    color:#fff;
+    cursor:pointer;
+    font-weight:550; 
+    letter-spacing:0.4px;
+    transition:0.2s;
+}
+
+button:hover
+{
+    background-color:#005fa5;
+}
+
+/* ======================== */
+/* RESULTADOS (MODERADAMENTE GRANDE)
+        */
+/* ======================== */
+
+#resultado
+{
+    margin-top:28px; /* Reducido de 35px a 28px */
+    padding:20px; /* Reducido de 25px a 20px */
+    background:#fafbfc;
+    border:1px solid #d7d9dd; /* Reducido a 1px */
+    border-radius:10px; /* Reducido a 10px */
+    font-size:16px; /* Reducido de 18px a 16px */
+    color:#333;
+    min-height:60px; /* Reducido de 80px a 60px */
+    line-height:1.5; /* Reducido de 1.6 a 1.5 */
+    white-space:pre-line;
+}
+
+/* ======================== */
+/* IMAGEN GIF (MODERADAMENTE GRANDE)
+        */
+/* ======================== */
+
+#gif
+{
+    margin-top:35px; /* Reducido de 40px a 35px */
+    width:100%;
+    max-width:500px; /* Reducido de 600px a 500px */
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    border-radius:7px;
+    border:1px solid #cfcfcf;
+    background:#fafafa;
+    padding:6px; /* Reducido de 8px a 6px */
+}
+.btn-back
+{
+    display:inline-block;
+    margin-bottom:20px; /* Reducido de 25px a 20px */
+    padding:8px 16px; /* Reducido de 10px/20px a 8px/16px */
+    background:#6abf69;
+    color:white;
+    border-radius:5px;
+    font-size:15px; /* Reducido de 16px a 15px */
+    text-decoration:none;
+    border:1px solid #5aa75a;
+    transition:0.2s ease;
+    font-weight:550;
+    height:auto;
+}
+
+.btn-back:hover
+{
+    background:#5aae58;
+    border-color:#4d914d;
+}

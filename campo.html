@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Simulación de Potencial y Campo Eléctrico</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .container { display: flex; flex-direction: column; gap: 30px; }
+        .controls { min-width: 300px; }
+        .plot-area { display: flex; justify-content: space-around; gap: 20px;}
+        .plot-box { flex: 1; min-width: 45%; }
+        /* Estilos de input y botón... */
+        input[type="number"] { width: 100%; padding: 8px; margin: 5px 0 15px 0; box-sizing: border-box;}
+        button { padding: 10px 20px; background-color: #007bff; color: white; border: none; cursor: pointer; margin-top: 10px;}
+        .plot-img { max-width: 100%; height: auto; border: 1px solid #ccc; margin-top: 20px;}
+    </style>
+</head>
+<body>
+    <h1>Simulación de Campo Eléctrico y Potencial a Tierra</h1>
+    
+    <div class="container">
+        <div class="controls">
+            <h2>1. Parámetros de Diseño</h2>
+            <form id="simulationForm">
+                <label for="h_e">Longitud del Electrodo ($L_e$) [m]:</label>
+                <input type="number" id="h_e" value="2.4" step="0.1" required min="0.1"><br>
+
+                <label for="D">Diámetro del Electrodo (D) [m]:</label>
+                <input type="number" id="D" value="0.015875" step="0.001" required min="0.001"><br>
+
+                <label for="rho">Resistividad del Suelo ($\rho$) [Ω·m]:</label>
+                <input type="number" id="rho" value="7.25" step="0.1" required min="0.1"><br>
+
+                <label for="I_f">Corriente de Falla ($I_f$) [A]:</label>
+                <input type="number" id="I_f" value="50" step="1" required min="1"><br>
+                
+                <button type="button" onclick="generar()">Generar Simulación</button>
+            </form>
+            <p id="resultado" style="margin-top: 20px; color: blue;"></p>
+        </div>
+
+        <h2>2. Resultados de Visualización</h2>
+        <div class="plot-area">
+            <div class="plot-box">
+                <h3>Vista A: 3D (Campo E y Corte V)</h3>
+                <img id="gif3D" src="" alt="Simulación 3D" class="plot-img" style="display: none;">
+            </div>
+            
+            <div class="plot-box">
+                <h3>Vista B: Potencial Superficial (2D Superior)</h3>
+                <img id="img2D" src="" alt="Potencial 2D Superior" class="plot-img" style="display: none;">
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

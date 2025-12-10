@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Cálculo de Resistencia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <a href="index.html" class="btn-back">⟵ Volver al menú principal</a>
+  <div class="container">
+    <h2>Cálculo de Resistencia del Pozo a Tierra</h2>
+
+    <label>Resistividad del suelo ρ [Ω·m]</label>
+    <input id="rho" type="number" step="0.01" value="50">
+
+    <label>Longitud del electrodo Lₑ [m]</label>
+    <input id="Le" type="number" step="0.01" value="2.4">
+
+    <label>Diámetro del electrodo D [m]</label>
+    <input id="D" type="number" step="0.0001" value="0.015875">
+
+    <button onclick="calcularR()">Calcular R</button>
+
+    <div id="resultado" style="margin-top:20px;"></div>
+  </div>
+
+  <script>
+    function calcularR() {
+      const rho = parseFloat(document.getElementById("rho").value);
+      const Le  = parseFloat(document.getElementById("Le").value);
+      const D   = parseFloat(document.getElementById("D").value);
+
+      const R = (rho / (2 * Math.PI * Le)) * (Math.log(8 * Le / D) - 1);
+
+      document.getElementById("resultado").innerHTML = 
+        "<b>Resistencia R:</b> " + R.toFixed(4) + " Ω";
+    }
+  </script>
+
+</body>
+</html>
